@@ -18,10 +18,13 @@ This repository contains an scripts, configuration files, and example classes fo
 Usage Example (command-line):
 
 Bootstrap a new network
+
 `bash
 java -cp "build/classes:config:lib/log4j.jar" de.uniba.wiai.lspi.chord.service.impl.OpenChordTest bootstrap
 `
+
 Join an existing network
+
 `bash
 java -cp "build/classes:config:lib/log4j.jar" de.uniba.wiai.lspi.chord.service.impl.OpenChordTest peer localhost:8081 localhost:8080
 `
@@ -44,6 +47,7 @@ java -cp "build/classes:config:lib/log4j.jar" de.uniba.wiai.lspi.chord.service.i
 
 
 Usage Example:
+
 `bash runme.sh
 `
 
