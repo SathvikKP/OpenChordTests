@@ -30,15 +30,13 @@ public class CreatePeer {
         try {
             chord.join(localURL, bootstrapURL);
             System.out.println("Peer joined at " + localURL + " via " + bootstrapURL);
-            // Measure memory usage after joining the network
             Runtime runtime = Runtime.getRuntime();
-            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; // Convert to MB
+            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; 
             System.out.println("Memory usage at " + localURL + " = " + usedMemory + " MB");
         } catch (ServiceException e) {
             throw new RuntimeException("Could not join network!", e);
         }
 
-        // Interactive loop for peer functionality
         Scanner scanner = new Scanner(System.in);
         while(true) {
             System.out.println("\n[Peer " + args[0] + "] Enter command: 'insert' or 'lookup' (or 'exit' to quit):");
@@ -55,7 +53,7 @@ public class CreatePeer {
                     chord.insert(new StringKey(key), value);
                     System.out.println("Inserted (" + key + ", " + value + ")");
                     Runtime runtime = Runtime.getRuntime();
-                    long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; // Convert to MB
+                    long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024;
                     System.out.println("Memory usage at " + localURL + " = " + usedMemory + " MB");
                 } catch (Exception e) {
                     System.out.println("Error inserting key: " + e.getMessage());
@@ -66,20 +64,20 @@ public class CreatePeer {
                 try {
                     StringKey lookupKey = new StringKey(key);
 
-                    // Measure lookup time
+                    
                     long startTime = System.nanoTime();
                     Set<Serializable> results = chord.retrieve(lookupKey);
                     long endTime = System.nanoTime();
-                    long elapsedTime = (endTime - startTime) / 1_000_000; // Convert to milliseconds
+                    long elapsedTime = (endTime - startTime) / 1_000_000; 
 
                     System.out.println("Lookup time for key " + lookupKey + " = " + elapsedTime + " ms");
 
-                    // Display results
+                    
                     for (Serializable result : results) {
                         System.out.println("Retrieved value: " + result);
                     }
                     Runtime runtime = Runtime.getRuntime();
-                    long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; // Convert to MB
+                    long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; 
                     System.out.println("Memory usage at " + localURL + " = " + usedMemory + " MB");
                 } catch (Exception e) {
                     System.out.println("Error during lookup: " + e.getMessage());

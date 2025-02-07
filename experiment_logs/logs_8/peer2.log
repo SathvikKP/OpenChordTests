@@ -1,0 +1,4 @@
+2025-02-07 04:18:03 WARN  OpenChordTest:205  - Peer joined at ocsocket://localhost:8082/ via ocsocket://localhost:8080/
+2025-02-07 04:18:03 WARN  OpenChordTest:58  - Insert time for key 2 = 45 ms
+2025-02-07 04:18:03 WARN  OpenChordTest:60  - Inserted (2, default)
+2025-02-07 04:18:03 WARN  OpenChordTest:64  - Memory usage at ocsocket://localhost:8082/ = 12 MB

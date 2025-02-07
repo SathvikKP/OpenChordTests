@@ -8,13 +8,14 @@ import java.net.MalformedURLException;
 import de.uniba.wiai.lspi.chord.service.impl.StringKey;
 
 
+/* This code fails as you cannot join exisiting peer*/
 public class InsertKey {
     public static void main(String[] args) {
         if (args.length < 3) {
-            System.out.println("Usage: java InsertKey <localURL> <key> <value>");
+            System.out.println("Wrong usage");
             return;
         }
-
+        /// de.uniba.wiai.lspi.chord.service.PropertiesLoader.loadPropertyFile();
         PropertiesLoader.loadPropertyFile();
         String protocol = URL.KNOWN_PROTOCOLS.get(URL.SOCKET_PROTOCOL);
         URL localURL;
@@ -30,12 +31,12 @@ public class InsertKey {
         try {
             chord.join(localURL, new URL(protocol + "://localhost:8080/"));
             System.out.println("Joined network at " + localURL);
-            // Measure memory usage after joining the network
+           
             Runtime runtime = Runtime.getRuntime();
-            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; // Convert to MB
+            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; 
             System.out.println("Memory usage at " + localURL + " = " + usedMemory + " MB");
 
-            // Use StringKey for key insertion
+            
             StringKey key = new StringKey(args[1]);
             Serializable value = args[2];
 

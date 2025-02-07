@@ -37,7 +37,6 @@ public class CreateNetwork {
             throw new RuntimeException("Could not create DHT!", e);
         }
 
-        // Interactive loop: allow lookups continuously
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("\n[Bootstrap Node] Enter key to lookup (or type 'exit' to quit):");
@@ -49,15 +48,15 @@ public class CreateNetwork {
             try {
                 StringKey lookupKey = new StringKey(key);
 
-                // Measure lookup time
+               
                 long startTime = System.nanoTime();
                 Set<Serializable> results = chord.retrieve(lookupKey);
                 long endTime = System.nanoTime();
-                long elapsedTime = (endTime - startTime) / 1_000_000; // Convert to milliseconds
+                long elapsedTime = (endTime - startTime) / 1_000_000; 
 
                 System.out.println("Lookup time for key " + lookupKey + " = " + elapsedTime + " ms");
 
-                // Display results
+                
                 for (Serializable result : results) {
                     System.out.println("Retrieved value: " + result);
                 }

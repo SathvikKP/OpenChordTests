@@ -14,9 +14,11 @@ screen -dmS network bash -c 'java -Dlogfile=logs/bootstrap.log -Dlog4j.configura
 sleep 2
 
 # Start peers....
-#for port in {8081..8088}; do
-for port in {8081..8096}; do
-#for port in {8081..8112}; do
+for port in {8081..8084}; do #4
+#for port in {8081..8088}; do #8
+#for port in {8081..8096}; do #16
+#for port in {8081..8112}; do #32
+#for port in {8081..8144}; do #64
     sleep 2
     peer_num=$((port - 8080))
     log_file="logs/peer$peer_num.log"

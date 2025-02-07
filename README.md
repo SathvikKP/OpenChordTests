@@ -24,15 +24,23 @@ Usage Example (command-line):
 
 Bootstrap a new network
 
-`bash
+```bash
 java -cp "build/classes:config:lib/log4j.jar" de.uniba.wiai.lspi.chord.service.impl.OpenChordTest bootstrap
-`
+```
 
 Join an existing network
 
-`bash
+```bash
 java -cp "build/classes:config:lib/log4j.jar" de.uniba.wiai.lspi.chord.service.impl.OpenChordTest peer localhost:8081 localhost:8080
-`
+```
+
+**Key Functions**
+The peers will have an infinite loop that performs the following functions
+
+- insert --> insert a key value pair to the DHT
+- lookup --> lookup the value for a given key
+- runtests1 --> performs lookup many times and calculates average
+- runtests2 --> performs insertion many times and calculates average
 
 ---
 
@@ -49,12 +57,14 @@ java -cp "build/classes:config:lib/log4j.jar" de.uniba.wiai.lspi.chord.service.i
 **Note**:
 - This sets environment variables and classpaths to include the `config` directory and dependencies in `lib/`. I placed it here for convinence. If you change the location, then lot of changes are required
 - It creates a ring of nodes automatically without manually issuing multiple `java` commands.
+- It stores log files for each peer in logs directory
 
 
 Usage Example:
 
-`bash runme.sh
-`
+```bash 
+runme.sh
+```
 
 ---
 
@@ -65,12 +75,7 @@ Usage Example:
 - **log4j.properties**: I have disabled debug logs and have used WARN level logs for convinence and testing. Feel free to change it to however you want. Currently, it stores logs for each peer in the ./logs/peer* format for easy viewing.  
 - **chord.properties**: We can change default Chord parameters such as `successors=2`.
 
-**Highlights**:  
-- Adjust `chord.properties` to tune Chord’s maintenance tasks for your environment.  
-- Edit `log4j.properties` or a similar file to control the logging level, whether writing to console/file, log format, etc.  
-- Place additional libraries or JAR files in `lib/` if you add new features requiring extra dependencies.
 
----
 
 ## How to Get Started
 

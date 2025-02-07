@@ -1,0 +1,20 @@
+2025-02-07 03:17:39 WARN  OpenChordTest:203  - Peer joined at ocsocket://localhost:8087/ via ocsocket://localhost:8080/
+2025-02-07 03:17:40 WARN  OpenChordTest:58  - Insert time for key 7 = 643 ms
+2025-02-07 03:17:40 WARN  OpenChordTest:60  - Inserted (7, default)
+2025-02-07 03:17:40 WARN  OpenChordTest:64  - Memory usage at ocsocket://localhost:8087/ = 16 MB
+2025-02-07 03:19:19 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916359347, id to look up=119 222 104 218 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:19:22 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916362063, id to look up=123 82 0 155 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:19:24 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916364380, id to look up=77 19 75 192 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:19:25 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916365819, id to look up=119 25 161 199 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:20:07 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916407466, id to look up=119 222 104 218 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:20:09 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916409421, id to look up=123 82 0 155 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:20:11 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916411759, id to look up=77 19 75 192 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:20:13 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916413161, id to look up=119 25 161 199 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:20:43 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916443495, id to look up=119 222 104 218 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:20:45 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916445449, id to look up=123 82 0 155 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:20:47 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916447299, id to look up=77 19 75 192 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:20:48 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916448268, id to look up=119 25 161 199 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:21:16 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916476151, id to look up=119 222 104 218 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:21:17 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916477893, id to look up=123 82 0 155 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:21:19 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916479656, id to look up=77 19 75 192 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 
+2025-02-07 03:21:20 FATAL 145 84 232 106 :379  - The rare situation has occured at time 1738916480594, id to look up=119 25 161 199 , id of local node=145 84 232 106 , id of predecessor=134 24 122 57 

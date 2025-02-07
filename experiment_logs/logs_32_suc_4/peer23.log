@@ -1,0 +1,9 @@
+2025-02-07 03:25:46 WARN  OpenChordTest:203  - Peer joined at ocsocket://localhost:8103/ via ocsocket://localhost:8080/
+2025-02-07 03:25:46 WARN  OpenChordTest:58  - Insert time for key 23 = 319 ms
+2025-02-07 03:25:46 WARN  OpenChordTest:60  - Inserted (23, default)
+2025-02-07 03:25:46 WARN  OpenChordTest:64  - Memory usage at ocsocket://localhost:8103/ = 9 MB
+2025-02-07 03:28:10 FATAL 125 23 89 250 :379  - The rare situation has occured at time 1738916890997, id to look up=77 19 75 192 , id of local node=125 23 89 250 , id of predecessor=100 32 172 14 
+2025-02-07 03:28:52 FATAL 125 23 89 250 :379  - The rare situation has occured at time 1738916932186, id to look up=77 19 75 192 , id of local node=125 23 89 250 , id of predecessor=100 32 172 14 
+2025-02-07 03:29:48 FATAL 125 23 89 250 :379  - The rare situation has occured at time 1738916988575, id to look up=77 19 75 192 , id of local node=125 23 89 250 , id of predecessor=100 32 172 14 
+2025-02-07 03:30:15 FATAL 125 23 89 250 :379  - The rare situation has occured at time 1738917015645, id to look up=77 19 75 192 , id of local node=125 23 89 250 , id of predecessor=100 32 172 14 
+2025-02-07 03:30:43 FATAL 125 23 89 250 :379  - The rare situation has occured at time 1738917043602, id to look up=77 19 75 192 , id of local node=125 23 89 250 , id of predecessor=100 32 172 14 

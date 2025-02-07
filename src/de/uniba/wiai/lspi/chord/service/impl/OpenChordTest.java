@@ -14,79 +14,76 @@ public class OpenChordTest {
     private static final Logger logger = Logger.getLogger(OpenChordTest.class);
 
     /** 
-     * Runs the interactive loop that accepts commands and calls the appropriate operation method.
+     * Runs the infinite loop for terminal - buggy (fix not in scope of assignment)
      */
     private static void infiniteLoop(Chord chord, URL localURL) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("\n[Node " + localURL + "] Enter command: 'insert' or 'lookup' or 'runtests' (or 'exit' to quit):");
+            System.out.println("\n[Node " + localURL + "] Enter command: 'insert' or 'lookup' or 'runtests1' or 'runtests2' (or 'exit' to quit):");
             String command = scanner.nextLine();
             if ("exit".equalsIgnoreCase(command)) {
-                System.out.println("Exiting");
-                logger.warn("Exiting.");
-                break;
+                System.out.println("Exiting"); logger.warn("Exiting."); break;
             } else if ("insert".equalsIgnoreCase(command)) {
                 insertOperation(chord, localURL, scanner, null, null);
             } else if ("lookup".equalsIgnoreCase(command)) {
                 lookupOperation(chord, localURL, scanner, null);
-            } else if ("runtests".equalsIgnoreCase(command)) {
-                runtests(chord, localURL, scanner);
+            } else if ("runtests1".equalsIgnoreCase(command)) {
+                runtests1(chord, localURL, scanner);
+            } else if ("runtests2".equalsIgnoreCase(command)) {
+                runtests2(chord, localURL, scanner);
             } else {
-                System.out.println("Unknown.");
-                logger.warn("Unknown.");
+                System.out.println("Unknown."); logger.warn("Unknown.");
             }
         }
         scanner.close();
     }
     
     /**
-     * Performs the insert operation.
+     * Performs the insert operation. (only 1)
      */
-    private static void insertOperation(Chord chord, URL localURL, Scanner scanner, String keyInput, String valueInput) {
-        String key = keyInput;
-        String value = valueInput;
+    private static long insertOperation(Chord chord, URL localURL, Scanner scanner, String keyInput, String valueInput) {
+        String key = keyInput; String value = valueInput;
         if (key == null || key.trim().isEmpty()) {
-            System.out.println("Enter key to insert: ");
-            key = scanner.nextLine();
+            System.out.println("Enter key to insert: "); key = scanner.nextLine();
         }
         if (value == null || value.trim().isEmpty()) {
-            System.out.println("Enter value for key " + key + ": ");
-            value = scanner.nextLine();
+            System.out.println("Enter value for key " + key + ": "); value = scanner.nextLine();
         }
         try {
             long startTime = System.nanoTime();
             chord.insert(new StringKey(key), value);
             long endTime = System.nanoTime();
-            long elapsedTime = (endTime - startTime) / 1_000_000; // convert ns to ms
+            long elapsedTime = (endTime - startTime) / 1_000_000; 
             System.out.println("Insert time for key " + key + " = " + elapsedTime + " ms");
             logger.warn("Insert time for key " + key + " = " + elapsedTime + " ms");
             System.out.println("Inserted (" + key + ", " + value + ")");
             logger.warn("Inserted (" + key + ", " + value + ")");
             Runtime runtime = Runtime.getRuntime();
-            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; // in MB
+            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024;
             System.out.println("Memory usage at " + localURL + " = " + usedMemory + " MB");
             logger.warn("Memory usage at " + localURL + " = " + usedMemory + " MB");
+            return elapsedTime;
         } catch (Exception e) {
             System.out.println("Error inserting key: " + e.getMessage());
             logger.warn("Error inserting key: " + e.getMessage());
+            return -1;
         }
     }
     
     /**
-     * Performs the lookup operation.
+     * Performs the lookup operation. (only 1)
      */
     private static long lookupOperation(Chord chord, URL localURL, Scanner scanner, String keyInput) {
         String key = keyInput;
         if (key == null || key.trim().isEmpty()) {
-            System.out.println("Enter key to lookup: ");
-            key = scanner.nextLine();
+            System.out.println("Enter key to lookup: "); key = scanner.nextLine();
         }
         try {
             StringKey lookupKey = new StringKey(key);
             long startTime = System.nanoTime();
             Set<Serializable> results = chord.retrieve(lookupKey);
             long endTime = System.nanoTime();
-            long elapsedTime = (endTime - startTime) / 1_000_000; // convert ns to ms
+            long elapsedTime = (endTime - startTime) / 1_000_000; 
             System.out.println("Lookup time for key " + key + " = " + elapsedTime + " ms");
             logger.warn("Lookup time for key " + key + " = " + elapsedTime + " ms");
             boolean found = false;
@@ -112,9 +109,9 @@ public class OpenChordTest {
     }
 
     /**
-     * Performs the runtests operation.
+     * Performs the runtests1 operation - lookups
      */
-    public static void runtests(Chord chord, URL localURL, Scanner scanner) {
+    public static void runtests1(Chord chord, URL localURL, Scanner scanner) {
         System.out.println("Enter number of lookups to perform: ");
         int numTests = Integer.parseInt(scanner.nextLine());
         long totalTime = 0; int lookups = 0;
@@ -130,14 +127,37 @@ public class OpenChordTest {
             System.out.println("Average lookup time for " + lookups + " lookups = " + averageTime + " ms");
             logger.warn("Average lookup time for " + lookups + " lookups = " + averageTime + " ms");
         }
-        
     }
 
     /**
-     * Runs in bootstrap (network) mode.
-     * Initializes a new Chord network (using create) and then enters the interactive loop.
+    * Performs the runtests2 operation - inserts
+    */
+    public static void runtests2(Chord chord, URL localURL, Scanner scanner) {
+        System.out.println("Enter start number: ");
+        int startNum = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter end number: ");
+        int endNum = Integer.parseInt(scanner.nextLine());
+        long totalTime = 0; int inserts = 0;
+        for (int i = startNum; i <= endNum; i++) {
+            String key = Integer.toString(i);
+            long timeTaken = insertOperation(chord, localURL, scanner, key, "custom");
+            if (timeTaken > 0) {
+                totalTime += timeTaken; inserts++;
+            }
+        }
+        if (inserts > 0) {
+            long averageTime = totalTime / inserts;
+            System.out.println("Average insert time for " + inserts + " inserts = " + averageTime + " ms");
+            logger.warn("Average insert time for " + inserts + " inserts = " + averageTime + " ms");
+        }
+    }
+
+    /**
+     * Run bootstrap (network) mode. (Note to self --> some issue with not able to insert)
+     * Initializes a new Chord network (using create) and then enters infinite loop in terminal.
      */
     public static void runBootstrap() {
+        //de.uniba.wiai.lspi.chord.service.PropertiesLoader.loadPropertyFile();
         PropertiesLoader.loadPropertyFile();
         String protocol = URL.KNOWN_PROTOCOLS.get(URL.SOCKET_PROTOCOL);
         URL localURL = null;
@@ -152,7 +172,8 @@ public class OpenChordTest {
             chord.create(localURL);
             System.out.println("Chord network created at " + localURL);
             logger.warn("Chord network created at " + localURL);
-            //Scanner scanner = new Scanner(System.in);
+            // Scanner scanner = new Scanner(System.in);
+            // the following insertion code does not work - dunnno why
             chord.insert(new StringKey("8080"), "default");
             System.out.println("Inserted (" + 8080 + ", " + "default" + ")");
             logger.warn("Inserted (" + 8080 + ", " + "default" + ")");
@@ -164,11 +185,11 @@ public class OpenChordTest {
     }
 
     /**
-     * Runs in peer mode.
-     * Joins an existing Chord network (using join) and then enters the interactive loop.
-     * Expects two parameters: local URL (e.g. localhost:8081) and bootstrap URL (e.g. localhost:8080).
+     * Create peer and joins existing Chord network (using join).
+     * Note to self--> local URL (localhost:xxxx) vs bootstrap URL (localhost:8080).
      */
     public static void runPeer(String local, String bootstrap) {
+        //de.uniba.wiai.lspi.chord.service.PropertiesLoader.loadPropertyFile();
         PropertiesLoader.loadPropertyFile();
         String protocol = URL.KNOWN_PROTOCOLS.get(URL.SOCKET_PROTOCOL);
         URL localURL, bootstrapURL;
@@ -187,30 +208,16 @@ public class OpenChordTest {
             String key = Integer.toString(Integer.parseInt(local.substring(local.length() - 4)) - 8080);
             Scanner scanner = new Scanner(System.in);
             insertOperation(chord, localURL, scanner, key, "default");
-            /*
-            long startTime = System.nanoTime();
-            chord.insert(new StringKey(key), "default");
-            long endTime = System.nanoTime();
-            long elapsedTime = (endTime - startTime) / 1_000_000; // convert ns to ms
-            System.out.println("Insert time for key " + key + " = " + elapsedTime + " ms");
-            logger.warn("Insert time for key " + key + " = " + elapsedTime + " ms");
-            System.out.println("Inserted (" + key + ", " + "default" + ")");
-            logger.warn("Inserted (" + key + ", " + "default" + ")");
-            Runtime runtime = Runtime.getRuntime();
-            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024;
-            System.out.println("Memory usage at " + localURL + " = " + usedMemory + " MB");
-            logger.warn("Memory usage at " + localURL + " = " + usedMemory + " MB");
-            */
+
         } catch (ServiceException e) {
             throw new RuntimeException("Could not join network!", e);
         }
-        // Enter interactive mode
+        // Enter loop
         infiniteLoop(chord, localURL);
     }
 
     /**
-     * Main method that selects the mode to run: "bootstrap" or "peer".
-     * Command-line usage:
+     * Main method for OpenChordTest.
      *   Bootstrap: java -cp ... OpenChordTest bootstrap
      *   Peer:      java -cp ... OpenChordTest peer <localURL> <bootstrapURL>
      */
@@ -228,7 +235,6 @@ public class OpenChordTest {
                 return;
             }
         }
-        // If no command-line arguments provided, prompt the user interactively.
         System.out.println("Invalid args"); System.exit(1);
     }
 }

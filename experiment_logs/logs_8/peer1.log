@@ -1,0 +1,83 @@
+2025-02-07 04:18:01 WARN  OpenChordTest:205  - Peer joined at ocsocket://localhost:8081/ via ocsocket://localhost:8080/
+2025-02-07 04:18:01 WARN  OpenChordTest:58  - Insert time for key 1 = 100 ms
+2025-02-07 04:18:01 WARN  OpenChordTest:60  - Inserted (1, default)
+2025-02-07 04:18:01 WARN  OpenChordTest:64  - Memory usage at ocsocket://localhost:8081/ = 11 MB
+2025-02-07 04:20:20 WARN  OpenChordTest:35  - Unknown.
+2025-02-07 04:20:20 WARN  OpenChordTest:35  - Unknown.
+2025-02-07 04:20:20 WARN  OpenChordTest:35  - Unknown.
+2025-02-07 04:20:20 WARN  OpenChordTest:35  - Unknown.
+2025-02-07 04:20:25 WARN  OpenChordTest:88  - Lookup time for key 1 = 52 ms
+2025-02-07 04:20:25 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:25 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 21 MB
+2025-02-07 04:20:25 WARN  OpenChordTest:88  - Lookup time for key 2 = 95 ms
+2025-02-07 04:20:25 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:25 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 21 MB
+2025-02-07 04:20:25 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920025186, id to look up=119 222 104 218 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:20:25 WARN  OpenChordTest:88  - Lookup time for key 3 = 252 ms
+2025-02-07 04:20:25 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:25 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 21 MB
+2025-02-07 04:20:25 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920025435, id to look up=27 100 83 137 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:20:25 WARN  OpenChordTest:88  - Lookup time for key 4 = 50 ms
+2025-02-07 04:20:25 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:25 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 22 MB
+2025-02-07 04:20:25 WARN  OpenChordTest:88  - Lookup time for key 5 = 106 ms
+2025-02-07 04:20:25 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:25 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 22 MB
+2025-02-07 04:20:25 WARN  OpenChordTest:88  - Lookup time for key 6 = 108 ms
+2025-02-07 04:20:25 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:25 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 22 MB
+2025-02-07 04:20:25 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920025705, id to look up=144 43 163 205 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:20:25 WARN  OpenChordTest:88  - Lookup time for key 7 = 202 ms
+2025-02-07 04:20:25 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:25 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 22 MB
+2025-02-07 04:20:25 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920025905, id to look up=254 93 187 206 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:20:25 WARN  OpenChordTest:88  - Lookup time for key 8 = 50 ms
+2025-02-07 04:20:25 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:25 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 22 MB
+2025-02-07 04:20:25 WARN  OpenChordTest:128  - Average lookup time for 8 lookups = 114 ms
+2025-02-07 04:20:35 WARN  OpenChordTest:35  - Unknown.
+2025-02-07 04:20:35 WARN  OpenChordTest:35  - Unknown.
+2025-02-07 04:20:35 WARN  OpenChordTest:35  - Unknown.
+2025-02-07 04:20:35 WARN  OpenChordTest:35  - Unknown.
+2025-02-07 04:20:35 WARN  OpenChordTest:35  - Unknown.
+2025-02-07 04:20:38 WARN  OpenChordTest:88  - Lookup time for key 1 = 98 ms
+2025-02-07 04:20:38 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:38 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 22 MB
+2025-02-07 04:20:39 WARN  OpenChordTest:88  - Lookup time for key 2 = 98 ms
+2025-02-07 04:20:39 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:39 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 22 MB
+2025-02-07 04:20:39 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920039065, id to look up=119 222 104 218 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:20:39 WARN  OpenChordTest:88  - Lookup time for key 3 = 201 ms
+2025-02-07 04:20:39 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:39 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 23 MB
+2025-02-07 04:20:39 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920039265, id to look up=27 100 83 137 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:20:39 WARN  OpenChordTest:88  - Lookup time for key 4 = 51 ms
+2025-02-07 04:20:39 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:39 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 23 MB
+2025-02-07 04:20:39 WARN  OpenChordTest:88  - Lookup time for key 5 = 95 ms
+2025-02-07 04:20:39 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:39 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 23 MB
+2025-02-07 04:20:39 WARN  OpenChordTest:88  - Lookup time for key 6 = 99 ms
+2025-02-07 04:20:39 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:39 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 23 MB
+2025-02-07 04:20:39 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920039515, id to look up=144 43 163 205 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:20:39 WARN  OpenChordTest:88  - Lookup time for key 7 = 199 ms
+2025-02-07 04:20:39 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:39 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 23 MB
+2025-02-07 04:20:39 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920039715, id to look up=254 93 187 206 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:20:39 WARN  OpenChordTest:88  - Lookup time for key 8 = 50 ms
+2025-02-07 04:20:39 WARN  OpenChordTest:93  - Retrieved value: default
+2025-02-07 04:20:39 WARN  OpenChordTest:102  - Memory usage at ocsocket://localhost:8081/ = 23 MB
+2025-02-07 04:20:39 WARN  OpenChordTest:128  - Average lookup time for 8 lookups = 111 ms
+2025-02-07 04:21:00 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920060476, id to look up=119 222 104 218 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:00 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920060675, id to look up=27 100 83 137 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:00 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920060984, id to look up=144 43 163 205 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:01 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920061185, id to look up=254 93 187 206 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:12 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920072594, id to look up=119 222 104 218 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:12 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920072794, id to look up=27 100 83 137 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:13 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920073093, id to look up=144 43 163 205 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:13 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920073294, id to look up=254 93 187 206 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:22 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920082523, id to look up=119 222 104 218 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:22 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920082735, id to look up=27 100 83 137 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:23 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920083034, id to look up=144 43 163 205 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 
+2025-02-07 04:21:23 FATAL 71 124 129 194 :379  - The rare situation has occured at time 1738920083234, id to look up=254 93 187 206 , id of local node=71 124 129 194 , id of predecessor=68 45 120 177 

@@ -8,12 +8,11 @@ javac -cp "./build/classes:config:lib/log4j.jar" src/de/uniba/wiai/lspi/chord/se
 
 read -p "Start??? (^C to cancel)..."
 
-# Start the bootstrap network node in a screen session named 'network'
+
 screen -dmS network bash -c 'java -cp "./build/classes:config:lib/log4j.jar" de.uniba.wiai.lspi.chord.service.impl.CreateNetwork'
 
 sleep 2
 
-# Start peers
 for port in {8081..8088}; do
     peer_num=$((port - 8080))
     screen -dmS peer_$peer_num bash -c 'java -cp "./build/classes:config:lib/log4j.jar" de.uniba.wiai.lspi.chord.service.impl.CreatePeer "localhost:'$port'" "localhost:8080"'

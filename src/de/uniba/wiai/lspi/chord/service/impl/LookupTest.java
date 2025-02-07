@@ -8,13 +8,14 @@ import de.uniba.wiai.lspi.util.logging.Logger;
 import java.net.MalformedURLException;
 import de.uniba.wiai.lspi.chord.service.impl.StringKey;
 
+/* This code fails as you cannot join exisiting peer*/
 public class LookupTest {
     public static void main(String[] args) {
         if (args.length < 2) {
-            System.out.println("Usage: java LookupTest <localURL> <key>");
+            System.out.println("Wrong");
             return;
         }
-
+        // de.uniba.wiai.lspi.chord.service.PropertiesLoader.loadPropertyFile();
         PropertiesLoader.loadPropertyFile();
         String protocol = URL.KNOWN_PROTOCOLS.get(URL.SOCKET_PROTOCOL);
         URL localURL;
@@ -28,25 +29,27 @@ public class LookupTest {
         Chord chord = new ChordImpl();
 
         try {
+
+
             chord.join(localURL, new URL(protocol + "://localhost:8080/"));
             System.out.println("Joined network at " + localURL);
-            // Measure memory usage after joining the network
+            
             Runtime runtime = Runtime.getRuntime();
-            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; // Convert to MB
+            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024; 
             System.out.println("Memory usage at " + localURL + " = " + usedMemory + " MB");
 
-            // Use StringKey for lookup
+            
             StringKey lookupKey = new StringKey(args[1]);
 
-            // Measure lookup time
+            
             long startTime = System.nanoTime();
             Set<Serializable> results = chord.retrieve(lookupKey);
             long endTime = System.nanoTime();
-            long elapsedTime = (endTime - startTime) / 1_000_000; // Convert to milliseconds
+            long elapsedTime = (endTime - startTime) / 1_000_000;
 
             System.out.println("Lookup time for key " + lookupKey + " = " + elapsedTime + " ms");
 
-            // Display results
+            
             for (Serializable result : results) {
                 System.out.println("Retrieved value: " + result);
             }
