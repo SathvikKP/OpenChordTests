@@ -2,6 +2,11 @@
 
 This repository contains an scripts, configuration files, and example classes for testing distributed hash table (DHT) functionality of OpenChord Software. I have written a brief overview focusing on three key elements: **OpenChordTest.java**, **runme.sh**, and the **config** directory.
 
+### Requirements
+- Ubuntu / Linux Operating System that supports the screen terminal software
+- openjdk or any jdk version
+
+
 ---
 
 ## 1. OpenChordTest.java
@@ -70,9 +75,11 @@ Usage Example:
 ## How to Get Started
 
 1. **clone the repository**
+
 (Need ubuntu with openjdk)
 
 2. **Run**  
+
 Examine, and change the runme.sh script according to your needs, then run it. It creates the following
 - **Bootstrap Node**: Creates a new Chord network on `localhost:8080`.  
 - **Peer Node**: Joins the existing network with a specific local port and the bootstrap port.
@@ -89,8 +96,7 @@ Examine, and change the runme.sh script according to your needs, then run it. It
 
 ## Additional Notes
 
-- **License**: Open Chord is licensed under the GNU General Public License (GPL).  
-- **Ant Build**: For a complete build, use the provided `build.xml` with Apache Ant.  
+- **License**: Open Chord is licensed under the GNU General Public License (GPL).   
 - **Manual Testing**: The `console.sh` script can run a console tool for direct node manipulation (from documentation)
 
-For further details, please see inline comments in the code or the `docs` folder for API references.
+For further details, see the comments in the code or the `docs` folder for official API reference.
