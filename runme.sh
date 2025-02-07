@@ -24,6 +24,6 @@ for port in {8081..8096}; do
     screen -dmS peer$peer_num bash -c "java -Dlogfile=$log_file -Dlog4j.configuration=file:config/log4j.properties -cp './build/classes:config:lib/log4j.jar' de.uniba.wiai.lspi.chord.service.impl.OpenChordTest peer 'localhost:$port' 'localhost:8080'"
 done
 
-echo "Bootstrap and peer nodes have been started in screen sessions."
-echo "To attach to a session, use: screen -r <session_name>"
-echo "For example, to attach to the bootstrap node, run: screen -r network"
+echo "Bootstrap and peer nodes have been started in screen sessions. Check logs to see if any FATAL errors occurred."
+echo "screen -ls to list the screen sessions, screen -r <session_name> to attach to a session."
+
