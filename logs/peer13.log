@@ -1,0 +1,22 @@
+2025-02-07 01:51:01 WARN  OpenChordTest:186  - Peer joined at ocsocket://localhost:8093/ via ocsocket://localhost:8080/
+2025-02-07 01:51:01 WARN  OpenChordTest:62  - Insert time for key 13 = 54 ms
+2025-02-07 01:51:01 WARN  OpenChordTest:64  - Inserted (13, default)
+2025-02-07 01:51:01 WARN  OpenChordTest:68  - Memory usage at ocsocket://localhost:8093/ = 18 MB
+2025-02-07 01:51:22 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911082584, id to look up=119 222 104 218 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:51:24 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911084885, id to look up=123 82 0 155 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:51:42 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911102776, id to look up=119 222 104 218 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:51:44 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911104135, id to look up=123 82 0 155 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:52:20 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911140195, id to look up=119 222 104 218 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:52:21 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911141864, id to look up=123 82 0 155 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:52:49 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911169815, id to look up=119 222 104 218 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:52:51 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911171684, id to look up=123 82 0 155 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:53:15 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911195815, id to look up=119 222 104 218 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:53:17 FATAL 161 201 197 38 :379  - The rare situation has occured at time 1738911197304, id to look up=123 82 0 155 , id of local node=161 201 197 38 , id of predecessor=145 84 232 106 
+2025-02-07 01:54:39 WARN  SocketProxy:1053  - Could not read response from stream!
+java.io.EOFException
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3232)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1713)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:540)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:498)
+	at de.uniba.wiai.lspi.chord.com.socket.SocketProxy.run(SocketProxy.java:1041)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
