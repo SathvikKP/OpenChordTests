@@ -76,11 +76,8 @@ Usage Example:
 
 1. **clone the repository**
 
-(Need ubuntu with openjdk)
-
 2. **Run**  
-
-Examine, and change the runme.sh script according to your needs, then run it. It creates the following
+- Examine, and change the runme.sh script according to your needs, then run it. It creates the following
 - **Bootstrap Node**: Creates a new Chord network on `localhost:8080`.  
 - **Peer Node**: Joins the existing network with a specific local port and the bootstrap port.
 
